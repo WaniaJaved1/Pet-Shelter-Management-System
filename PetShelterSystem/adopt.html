@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adopt Pet - PawShelter</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ffe0b2,#ffccbc);
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 60px;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-weight:bold;
+    color:#ff6f00;
+}
+
+/* FORM BOX */
+.container{
+    width:360px;
+    margin:60px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.container h2{
+    margin-bottom:20px;
+    color:#2c3e50;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+button{
+    width:95%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(45deg,#ff6f00,#ff8f00);
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+/* SUCCESS MESSAGE */
+.success{
+    display:none;
+    margin-top:15px;
+    padding:10px;
+    background:#d4edda;
+    color:#155724;
+    border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-paw"></i> PawShelter
+    </div>
+</div>
+
+<!-- FORM -->
+<div class="container">
+
+    <h2><i class="fa-solid fa-heart"></i> Adopt a Pet</h2>
+
+    <input type="text" id="name" placeholder="Enter Your Name">
+    <input type="text" id="cnic" placeholder="Enter CNIC Number">
+    <input type="number" id="petid" placeholder="Enter Pet ID">
+
+    <button onclick="adoptPet()">
+        <i class="fa-solid fa-check"></i> Confirm Adoption
+    </button>
+
+    <div class="success" id="msg">
+        🎉 Adoption Successful! Thank you for saving a life ❤️
+    </div>
+
+</div>
+
+<script>
+function adoptPet(){
+    let name = document.getElementById("name").value;
+    let cnic = document.getElementById("cnic").value;
+    let petid = document.getElementById("petid").value;
+
+    if(name === "" || cnic === "" || petid === ""){
+        alert("Please fill all fields!");
+        return;
+    }
+
+    document.getElementById("msg").style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pets - PawShelter</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ffe0b2,#ffccbc);
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 60px;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-weight:bold;
+    color:#ff6f00;
+}
+
+/* CARDS */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:40px;
+}
+
+.card{
+    width:220px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card h4{
+    margin:10px 0 5px;
+}
+
+.card p{
+    color:#777;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+.btn{
+    .btn{
+    display:inline-block;
+    width:100%;
+    padding:8px;
+    background:#ff6f00;
+    color:rgb(168, 32, 32);
+    text-decoration:none;
+    border-radius:8px;
+    text-align:center;
+}
+}
+
+/* ADOPTED TAG */
+.adopted{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:green;
+    color:white;
+    padding:4px 8px;
+    font-size:12px;
+    border-radius:5px;
+    display:none;
+}
+
+.card.adopted-card .adopted{
+    display:block;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-paw"></i> PawShelter
+    </div>
+</div>
+
+<h2 style="text-align:center;margin-top:20px;">🐾 Available Pets</h2>
+
+<div class="cards">
+
+    <!-- CARD 1 -->
+    <div class="card" onclick="toggleAdopt(this)">
+        <div class="adopted">Adopted</div>
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=500">
+        <p style="color:#555;">
+    <i class="fa-solid fa-id-badge"></i> Pet ID: 101
+</p>
+        <h4>Bruno</h4>
+        <h4> Age : 3 year  </h4>
+        <p><i class="fa-solid fa-dog"></i> Golden Dog</p>
+
+        <a href="adopt.html" class="btn">
+    <i class="fa fa-heart"></i> Adopt
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card" onclick="toggleAdopt(this)">
+        <div class="adopted">Adopted</div>
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500">
+        <p style="color:#555;">
+    <i class="fa-solid fa-id-badge"></i> Pet ID: 102
+</p>
+        <h4>Max</h4>
+        <h4> Age : 4 year </h4>
+        <p><i class="fa-solid fa-dog"></i> German Shepherd</p>
+         <a href="adopt.html" class="btn">
+    <i class="fa fa-heart"></i> Adopt
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card" onclick="toggleAdopt(this)">
+        <div class="adopted">Adopted</div>
+        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=500">
+        <p style="color:#555;">
+    <i class="fa-solid fa-id-badge"></i> Pet ID: 201
+</p>
+        <h4>Luna</h4>
+        <h4> Age : 3  year </h4>
+        <p><i class="fa-solid fa-cat"></i> Persian Cat</p>
+      <a href="adopt.html" class="btn">
+    <i class="fa fa-heart"></i> Adopt
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card" onclick="toggleAdopt(this)">
+        <div class="adopted">Adopted</div>
+        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?w=500">
+        <p style="color:#555;">
+    <i class="fa-solid fa-id-badge"></i> Pet ID: 202
+</p>
+        <h4>Kitty</h4>
+        <h4> Age : 2 years </h4>
+        <p><i class="fa-solid fa-cat"></i> Siamese Cat</p>
+         <a href="adopt.html" class="btn">
+    <i class="fa fa-heart"></i> Adopt
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card" onclick="toggleAdopt(this)">
+        <div class="adopted">Adopted</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Chestnut-breasted_Malkoha2.jpg/250px-Chestnut-breasted_Malkoha2.jpg">
+        <i class="fa-solid fa-id-badge"></i> Pet ID: 202
+        <h4>Coco</h4>
+        <h4> Age : 1 year </h4>
+        <p><i class="fa-solid fa-dove"></i> Parrot</p>
+        <a href="adopt.html" class="btn">
+    <i class="fa fa-heart"></i> Adopt
+</a>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card" onclick="toggleAdopt(this)">  
+        <div class="adopted">Adopted</div>
+        <img src="https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?w=500">
+        <i class="fa-solid fa-id-badge"></i> Pet ID: 202
+        <h4>Rio</h4>
+        <h4> Age : 2 years  </h4>
+        <p><i class="fa-solid fa-dove"></i> Friendly Bird</p>
+        <a href="adopt.html" class="btn">
+    <i class="fa fa-heart"></i> Adopt
+    </div>
+
+</div>
+
+<!-- SIMPLE TOGGLE SCRIPT -->
+<script>
+function toggleAdopt(card){
+    card.classList.toggle("adopted-card");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Pet - PawShelter</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ffe0b2,#ffccbc);
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 60px;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-weight:bold;
+    color:#ff6f00;
+}
+
+/* FORM BOX */
+.container{
+    width:400px;
+    margin:50px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+h2{
+    color:#2c3e50;
+    margin-bottom:20px;
+}
+
+/* INPUTS */
+input{
+    width:90%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+/* BUTTON */
+button{
+    width:95%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(45deg,#ff6f00,#ff8f00);
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+/* SUCCESS MESSAGE */
+.success{
+    display:none;
+    margin-top:15px;
+    padding:10px;
+    background:#d4edda;
+    color:#155724;
+    border-radius:8px;
+}
+
+/* ICONS */
+i{
+    margin-right:5px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-paw"></i> PawShelter
+    </div>
+</div>
+
+<!-- FORM -->
+<div class="container">
+
+    <h2><i class="fa-solid fa-plus"></i> Add New Pet</h2>
+
+    <input type="number" id="id" placeholder="Pet ID">
+    <input type="text" id="name" placeholder="Pet Name">
+    <input type="number" id="age" placeholder="Age">
+    <input type="text" id="breed" placeholder="Breed">
+    <input type="text" id="img" placeholder="Image Link (URL)">
+
+    <button onclick="addPet()">
+        <i class="fa-solid fa-check"></i> Add Pet
+    </button>
+
+    <div class="success" id="msg">
+        ✅ Pet Added Successfully!
+    </div>
+
+</div>
+
+<script>
+function addPet(){
+
+    let id = document.getElementById("id").value;
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let breed = document.getElementById("breed").value;
+    let img = document.getElementById("img").value;
+
+    if(id === "" || name === "" || age === "" || breed === "" || img === ""){
+        alert("Please fill all fields!");
+        return;
+    }
+
+    // just UI feedback (no JSON as you wanted)
+    document.getElementById("msg").style.display = "block";
+
+    // clear fields
+    document.getElementById("id").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("age").value = "";
+    document.getElementById("breed").value = "";
+    document.getElementById("img").value = "";
+}
+</script>
+
+</body>
+</html>

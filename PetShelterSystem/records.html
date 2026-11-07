@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adoption Records - PawShelter</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(135deg,#ffe0b2,#ffccbc);
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 60px;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-weight:bold;
+    color:#ff6f00;
+}
+
+/* TITLE */
+h2{
+    text-align:center;
+    margin-top:25px;
+    color:#2c3e50;
+}
+
+/* GRID */
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:40px;
+}
+
+/* CARD */
+.card{
+    width:260px;
+    background:white;
+    border-radius:15px;
+    padding:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* ICON BADGE */
+.badge{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:#28a745;
+    color:white;
+    padding:5px 8px;
+    font-size:12px;
+    border-radius:6px;
+}
+
+/* TEXT */
+.card h4{
+    margin-bottom:8px;
+    color:#333;
+}
+
+.card p{
+    margin:5px 0;
+    color:#666;
+    font-size:14px;
+}
+
+/* BUTTON STYLE (toggle feel) */
+.btn{
+    margin-top:10px;
+    width:100%;
+    padding:8px;
+    border:none;
+    border-radius:8px;
+    background:#ff6f00;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e65c00;
+    transform:scale(1.03);
+}
+
+/* ICONS */
+i{
+    margin-right:5px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <i class="fa-solid fa-paw"></i> PawShelter
+    </div>
+</div>
+
+<h2>📜 Adoption Records</h2>
+
+<div class="cards">
+
+    <!-- RECORD 1 -->
+    <div class="card">
+        <div class="badge">Completed</div>
+        <h4><i class="fa-solid fa-dog"></i> Bruno</h4>
+        <p><i class="fa-solid fa-id-badge"></i> Pet ID: 101</p>
+        <p><i class="fa-solid fa-user"></i> Adopter: Ali Khan</p>
+        <p><i class="fa-solid fa-credit-card"></i> CNIC: 35201-1234567-1</p>
+        <p><i class="fa-solid fa-phone"></i> 0300-1234567</p>
+
+        <button class="btn">
+            <i class="fa-solid fa-check"></i> Verified
+        </button>
+    </div>
+
+    <!-- RECORD 2 -->
+    <div class="card">
+        <div class="badge">Completed</div>
+        <h4><i class="fa-solid fa-cat"></i> Luna</h4>
+        <p><i class="fa-solid fa-id-badge"></i> Pet ID: 201</p>
+        <p><i class="fa-solid fa-user"></i> Adopter: Sara Ahmed</p>
+        <p><i class="fa-solid fa-credit-card"></i> CNIC: 35202-9876543-2</p>
+        <p><i class="fa-solid fa-phone"></i> 0312-7654321</p>
+
+        <button class="btn">
+            <i class="fa-solid fa-check"></i> Verified
+        </button>
+    </div>
+
+    <!-- RECORD 3 -->
+    <div class="card">
+        <div class="badge">Completed</div>
+        <h4><i class="fa-solid fa-dove"></i> Rio</h4>
+        <p><i class="fa-solid fa-id-badge"></i> Pet ID: 302</p>
+        <p><i class="fa-solid fa-user"></i> Adopter: John Smith</p>
+        <p><i class="fa-solid fa-credit-card"></i> CNIC: 35201-5555555-5</p>
+        <p><i class="fa-solid fa-phone"></i> 0333-9999999</p>
+
+        <button class="btn">
+            <i class="fa-solid fa-check"></i> Verified
+        </button>
+    </div>
+
+</div>
+
+</body>
+</html>
